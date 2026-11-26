@@ -6,14 +6,14 @@ dependencies:
   - python=3.12
 
   # Core libraries named in the assignment.
-  - numpy
-  - pandas
-  - matplotlib
-  - scikit-learn
+  - numpy=2.2.6
+  - pandas=3.1.1
+  - matplotlib=3.10.6
+  - scikit-learn=1.7.1
 
   # Statistical tests, confidence intervals, and optional plotting helpers.
-  - scipy
-  - seaborn
+  - scipy=1.15.2
+  - seaborn=0.13.2
 
   # Jupyter interface and Python kernel for the project notebooks.
   - jupyterlab
