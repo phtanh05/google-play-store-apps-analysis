@@ -10,9 +10,9 @@ Dự án thực hiện quy trình khoa học dữ liệu hoàn chỉnh trên b�
 
 | Thành viên | MSSV | Câu hỏi phụ trách | Công việc chính |
 |---|---|---|---|
-| Phạm Hoàng Tuấn Anh | `[Điền MSSV]` | Câu 2.1, Câu 2.2 | Xây dựng module `src/preprocessing.py`, thực hiện chính phần thu thập/khám phá dữ liệu (`01_collection_exploration.ipynb`), tiền xử lý chung và phân tích câu 2.1, 2.2 |
+| Phạm Hoàng Tuấn Anh | `23120211` | Câu 2.1, Câu 2.2 | Xây dựng module `src/preprocessing.py`, thực hiện chính phần thu thập/khám phá dữ liệu (`01_collection_exploration.ipynb`), tiền xử lý chung và phân tích câu 2.1, 2.2 |
 | Văn Đình Hiếu | `23120260` | Câu 2.3, Câu 3.1 (ML) | Khảo sát giấy phép/nhãn dữ liệu, phân tích câu 2.3, xây dựng toàn bộ quy trình học máy (`03_ml_question.ipynb`) và ghi nhận `LLM_USAGE.md` |
-| Nguyễn Trung Dũng | `[Điền MSSV]` | Câu 2.4, Câu 2.5 | Phân tích câu 2.4, 2.5 và tổng hợp các phát hiện chính (Key findings) |
+| Nguyễn Trung Dũng | `21120228` | Câu 2.4, Câu 2.5 | Phân tích câu 2.4, 2.5 và tổng hợp các phát hiện chính (Key findings) |
 
 ---
 
