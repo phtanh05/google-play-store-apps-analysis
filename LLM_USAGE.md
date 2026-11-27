@@ -29,3 +29,22 @@ Ghi nhận các lần sử dụng công cụ LLM đáng kể trong quá trình t
 * **Công cụ:** Gemini LLM
 * **Nội dung hỏi:** Đưa bản nháp `README.md` tự viết để nhờ gợi ý cách sắp xếp lại bố cục các đề mục, cải thiện định dạng Markdown (bảng biểu, cây thư mục, khối lệnh) giúp người đọc dễ theo dõi cấu trúc đồ án và cách chạy mã nguồn.
 * **Cách sử dụng / chỉnh sửa:** Giữ nguyên nội dung cốt lõi tự soạn, áp dụng các gợi ý về phân cấp tiêu đề và định dạng trình bày, đồng thời tự rà soát lại toàn bộ tên file, đường dẫn thư mục và câu lệnh cài đặt để đảm bảo khớp hoàn toàn với thực tế của repository.
+
+## Nguyễn Trung Dũng
+### 1. Kiểm tra tính nhất quán của dữ liệu đầu vào và kết quả tính toán ở câu 2.5 và 2.6 (`02_analysis.ipynb`)
+
+- **Công cụ:** Gemini LLM (Hydrogen)
+- **Nội dung hỏi:** Nhờ đối chiếu lại các bước lọc dữ liệu (xử lý giá trị thiếu, loại trùng lặp theo đơn vị phân tích) và kiểm tra xem các con số thống kê tổng hợp (tỷ lệ phần trăm, chênh lệch điểm phần trăm, giá trị trung vị/trung bình) ở câu 2.5 và 2.6 có bị mâu thuẫn với bảng kết quả xuất ra trong notebook hay không.
+- **Cách sử dụng / chỉnh sửa:** Tự thực hiện toàn bộ phần lập trình, thiết kế biến và chạy ra kết quả gốc trước; sau đó dùng phản hồi của AI để rà soát lại các phép tính làm tròn số, kiểm tra chéo giữa biểu đồ và bảng số liệu nhằm đảm bảo độ chính xác tuyệt đối.
+
+### 2. Rà soát cách diễn giải kết quả và trau chuốt nhận xét phân tích (`01_collection_exploration.ipynb`,`02_analysis.ipynb`)
+
+- **Công cụ:** Gemini LLM (Hydrogen)
+- **Nội dung hỏi:** Đưa các đoạn nhận xét tự viết cho câu 2.5 và 2.6 để nhờ kiểm tra xem cách diễn đạt có bị suy diễn quá mức (nhầm lẫn giữa tương quan quan sát được với quan hệ nhân quả) hay bỏ sót ý quan trọng nào từ biểu đồ/bảng biểu không.
+- **Cách sử dụng / chỉnh sửa:** Giữ nguyên các luận điểm chính tự rút ra từ dữ liệu thực tế; điều chỉnh lại câu chữ theo hướng khách quan, thận trọng và mạch lạc hơn, đồng thời bổ sung rõ ràng phạm vi diễn giải và giới hạn của tập dữ liệu gốc.
+
+### 3. Chuẩn hóa văn phong học thuật và bố cục trình bày trong Notebook(`01_collection_exploration.ipynb`,`02_analysis.ipynb`)
+
+- **Công cụ:** Gemini LLM (Hydrogen)
+- **Nội dung hỏi:** Nhờ gợi ý cách phân tách các ý nhận xét thành gạch đầu dòng ngắn gọn và thống nhất cách dùng thuật ngữ xuyên suốt từ phần đặt câu hỏi, động lực, tiêu chí chiều sâu đến phần kết luận ở cả hai câu 2.5 và 2.6.
+- **Cách sử dụng / chỉnh sửa:** Áp dụng các gợi ý về cách ngắt đoạn, in đậm từ khóa trọng tâm và tự rà soát lại toàn bộ văn bản trong các ô Markdown của `02_analysis.ipynb` để đảm bảo đồng bộ về hình thức với các phần còn lại của nhóm.
