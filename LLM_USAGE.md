@@ -23,3 +23,9 @@ Ghi nhận các lần sử dụng công cụ LLM đáng kể trong quá trình t
 - **Công cụ:** Gemini LLM
 - **Nội dung hỏi:** Nhờ rà soát lại xem cách diễn giải các chỉ số (ROC-AUC, PR-AUC, F1, Permutation Importance, khoảng tin cậy bootstrap) và các con số tổng hợp ở phần trả lời có bị mâu thuẫn với bảng kết quả hay suy diễn quá mức (nhân quả) không.
 - **Cách sử dụng / chỉnh sửa:** Tự đối chiếu lại với output thực tế trong notebook, chỉnh sửa các câu nhận xét cho thận trọng hơn (nhấn mạnh đây là mối liên hệ quan sát/dự báo) và bổ sung các giới hạn thực tế của dữ liệu.
+
+### 5. Rà soát bố cục và trình bày tài liệu (`README.md`)
+
+* **Công cụ:** Gemini LLM
+* **Nội dung hỏi:** Đưa bản nháp `README.md` tự viết để nhờ gợi ý cách sắp xếp lại bố cục các đề mục, cải thiện định dạng Markdown (bảng biểu, cây thư mục, khối lệnh) giúp người đọc dễ theo dõi cấu trúc đồ án và cách chạy mã nguồn.
+* **Cách sử dụng / chỉnh sửa:** Giữ nguyên nội dung cốt lõi tự soạn, áp dụng các gợi ý về phân cấp tiêu đề và định dạng trình bày, đồng thời tự rà soát lại toàn bộ tên file, đường dẫn thư mục và câu lệnh cài đặt để đảm bảo khớp hoàn toàn với thực tế của repository.
