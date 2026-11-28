@@ -24,6 +24,7 @@ Dự án thực hiện quy trình khoa học dữ liệu hoàn chỉnh trên b�
 * **Tác giả:** Lavanya Gupta (công bố/cập nhật lần cuối tháng 02/2019 trên Kaggle)
 * **Phương pháp thu thập:** Web scraping từ các trang ứng dụng trên Google Play Store.
 * **File sử dụng:** `data/raw/googleplaystore.csv` (10.841 dòng gốc, 13 cột; sau tiền xử lý chung còn **10.357 dòng**, **15 cột** gồm thêm `Size_MB` và `Size_varies`).
+* **Thể loại:** `Genres` lưu các thể loại khác nhau của cùng một bản ghi, phân cách bằng dấu `;`. Thống kê và mô hình xử lý từng nhãn thể loại. `Category` tiếp tục biểu diễn một danh mục trên mỗi bản ghi.
 * **Giấy phép:**
   * Trang Kaggle ghi nhận **CC BY-SA 4.0** ([Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)).
   * File `data/raw/license.txt` đi kèm ghi nhận **CC BY 3.0** ([Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/)).
@@ -56,7 +57,7 @@ Trên Kaggle có nhiều notebook công khai phân tích bộ dữ liệu này (
 * **Ứng dụng cập nhật gần đây phổ biến hơn rõ rệt (câu 2.3):** Nhóm cập nhật trong 90 ngày gần nhất đạt tỷ lệ >= 1M lượt cài là **49,9%** so với **20,8%** ở nhóm cũ hơn; chênh lệch sau phân tầng `Category x Type` là **+28,1 điểm phần trăm** (CI 95%: `[26,2; 29,7]`) và dương ở cả 20 danh mục lớn (còn **+20,8 điểm phần trăm** khi kiểm soát thêm kích thước).
 * **Ứng dụng dung lượng lớn hơn có lượt cài cao hơn (câu 2.4):** Trên **8.417 ứng dụng** có kích thước xác định, Spearman là **0,310** (sau phân tầng còn **0,266**, CI 95%: `[0,245; 0,283]`), mạnh nhất ở `SHOPPING` (`0,578`) và `GAME` (`0,349`).
 * **Nhãn độ tuổi nội dung không tạo khác biệt rõ về điểm đánh giá (câu 2.5):** Khi so trong cùng danh mục và khoảng cài đặt trên **7.307 ứng dụng**, chênh lệch điểm giữa `Teen` + `Mature 17+` và `Everyone` là **-0,030 điểm** (CI 95%: `[-0,066; 0,006]`), không có ý nghĩa thực tiễn.
-* **Dự đoán mốc 1 triệu lượt cài từ thuộc tính ban đầu (câu 3.1):** Mô hình `HistGradientBoosting` đạt **ROC-AUC 0,857**, **PR-AUC 0,790** và **F1 0,707** trên tập test (so với baseline đoán lớp đa số có ROC-AUC `0,500`, PR-AUC `0,388`, F1 `0`). Ba đặc trưng quan trọng nhất theo Permutation Importance là `Category`, `Size_MB` và `Price`.
+* **Dự đoán mốc 1 triệu lượt cài từ thuộc tính ban đầu (câu 3.1):** Mô hình `HistGradientBoosting` đạt **ROC-AUC 0,8575**, **PR-AUC 0,7941** và **F1 0,7107** trên tập test (so với baseline đoán lớp đa số có ROC-AUC `0,500`, PR-AUC `0,388`, F1 `0`). Ba đặc trưng quan trọng nhất theo Permutation Importance là `Category`, `Size_MB` và `Price`.
 
 ---
 
@@ -69,7 +70,7 @@ google-play-store-apps-analysis/
 ├── LLM_USAGE.md
 ├── data/
 │   ├── raw/                        # Dữ liệu gốc (googleplaystore.csv, license.txt)
-│   └── processed/                  # Dữ liệu sau tiền xử lý chung (apps_clean.csv)
+│   └── processed/                  # Dữ liệu sau tiền xử lý chung (googleplaystore_clean.csv)
 ├── src/
 │   └── preprocessing.py            # Các hàm làm sạch và ép kiểu dữ liệu dùng chung
 ├── notebooks/
@@ -96,5 +97,5 @@ conda activate google-play-store-apps-analysis
 ### Bước 3: Chạy các notebook theo thứ tự
 Mở JupyterLab (`jupyter lab`) hoặc chạy trực tiếp bằng `nbconvert` theo đúng thứ tự:
 1. `notebooks/01_collection_exploration.ipynb` — Thu thập, kiểm tra chất lượng và khám phá dữ liệu.
-2. `notebooks/02_analysis.ipynb` — Tiền xử lý chung (xuất `data/processed/apps_clean.csv`), phân tích 5 câu hỏi Non-ML (2.1–2.5) và tổng kết/phản tư.
+2. `notebooks/02_analysis.ipynb` — Tiền xử lý chung (xuất `data/processed/googleplaystore_clean.csv`), phân tích 5 câu hỏi Non-ML (2.1–2.5) và tổng kết/phản tư.
 3. `notebooks/03_ml_question.ipynb` — Huấn luyện, tinh chỉnh, đánh giá và giải thích mô hình Machine Learning (câu 3.1).

@@ -100,6 +100,21 @@ def convert_app_numeric(df):
 
     return result
 
+def split_genres(value):
+    """Tách nhãn thể loại duy nhất theo thứ tự xuất hiện trong bản ghi."""
+    if pd.isna(value):
+        return []
+
+    parts = (part.strip() for part in value.split(";"))
+    return list(dict.fromkeys(part for part in parts if part))
+
+
+def normalize_genres(genres):
+    """Chuẩn hóa các nhãn thể loại để lưu lại trong một ô CSV."""
+    parts = genres.astype("string").map(split_genres)
+    return parts.str.join(";").replace("", pd.NA).astype("string")
+
+
 def finalize_app_types(df):
     """Chuyển ngày, suy ra Type thiếu và chuyển các kiểu còn lại."""
     result = df.copy()
@@ -128,6 +143,7 @@ def finalize_app_types(df):
     ] = "Paid"
 
     # ---------- 3. Các cột phân loại ----------
+    result["Genres"] = normalize_genres(result["Genres"])
     categorical_cols = [
         "Category", "Type", "Content Rating", "Genres"
     ]

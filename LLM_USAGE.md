@@ -48,3 +48,17 @@ Ghi nhận các lần sử dụng công cụ LLM đáng kể trong quá trình t
 - **Công cụ:** Gemini LLM (Hydrogen)
 - **Nội dung hỏi:** Nhờ gợi ý cách phân tách các ý nhận xét thành gạch đầu dòng ngắn gọn và thống nhất cách dùng thuật ngữ xuyên suốt từ phần đặt câu hỏi, động lực, tiêu chí chiều sâu đến phần kết luận ở cả hai câu 2.5 và 2.6.
 - **Cách sử dụng / chỉnh sửa:** Áp dụng các gợi ý về cách ngắt đoạn, in đậm từ khóa trọng tâm và tự rà soát lại toàn bộ văn bản trong các ô Markdown của `02_analysis.ipynb` để đảm bảo đồng bộ về hình thức với các phần còn lại của nhóm.
+
+## Phạm Hoàng Tuấn Anh
+
+### 1. Thu thập và khám phá dữ liệu (`01_collection_exploration.ipynb`)
+
+- **Công cụ:** ChatGPT
+- **Nội dung hỏi:** Nhờ hướng dẫn đối chiếu các mục I, II.1, II.2 và II.4 với yêu cầu của đề bài.
+- **Cách sử dụng / chỉnh sửa:** Dùng ChatGPT như người hướng dẫn và nhờ chỉnh bố cục của các câu trả lời trong bản nháp.
+
+### 2. Tiền xử lý và phân tích (`02_analysis.ipynb`)
+
+- **Công cụ:** ChatGPT
+- **Nội dung hỏi:** Nhờ hướng dẫn kiểm tra các bước tiền xử lý ở phần I và cách đặt, triển khai câu hỏi 2.1 và 2.2.
+- **Cách sử dụng / chỉnh sửa:** Dùng hướng dẫn để đối chiếu bản nháp với bảng và biểu đồ đã chạy, rồi chỉnh cách diễn đạt.
